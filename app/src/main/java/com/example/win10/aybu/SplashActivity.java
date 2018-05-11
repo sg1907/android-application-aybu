@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
 
         iv.startAnimation(myAnim);
 
-        final Intent i=  new Intent(getApplicationContext(),MainActivity.class);
+        final Intent i=  new Intent(getApplicationContext(),LoginActivity.class);
 
         Thread timer = new Thread(){
             public void run(){
