@@ -30,7 +30,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/editText_userName"
+            android:id="@+id/edtTxt_username"
             android:hint="User Name"
             android:textColorHint="#b1000000"
             android:layout_marginLeft="70dp"
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
-            android:id="@+id/editText_password"
+            android:id="@+id/edtTxt_password"
             android:hint="Password"
             android:textColorHint="#b1000000"
             android:layout_marginLeft="70dp"

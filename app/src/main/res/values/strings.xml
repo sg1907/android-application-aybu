@@ -4,4 +4,11 @@
     <string name="tab_text_2">ANNUNCIATION</string>
     <string name="tab_text_3">NEWS</string>
     <string name="action_settings">Settings</string>
+    <string-array name="departments">
+        <item>Comp. Eng.</item>
+        <item>Elec. Eng.</item>
+        <item>Mech Eng.</item>
+        <item>Mater. Eng.</item>
+        <item>Civil Eng.</item>
+    </string-array>
 </resources>
