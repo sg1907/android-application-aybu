@@ -11,6 +11,8 @@
         <item>Industry Eng.</item>
         <item>Material Eng.</item>
         <item>Civil Eng.</item>
+        <item>Hukuk</item>
+        <item>Diş Hekimliği</item>
     </string-array>
     <string-array name="muh_urls">
         <item>http://www.ybu.edu.tr/muhendislik/bilgisayar/</item>
@@ -19,5 +21,7 @@
         <item>http://www.ybu.edu.tr/muhendislik/endustri/</item>
         <item>http://www.ybu.edu.tr/muhendislik/malzeme/</item>
         <item>http://www.ybu.edu.tr/muhendislik/insaat/</item>
+        <item>http://www.ybu.edu.tr/hukuk/</item>
+        <item>http://www.ybu.edu.tr/dishekimligi/</item>
     </string-array>
 </resources>

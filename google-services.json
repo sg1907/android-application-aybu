@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1019396591722",
+    "firebase_url": "https://aybuapplication.firebaseio.com",
+    "project_id": "aybuapplication",
+    "storage_bucket": "aybuapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019396591722:android:88f3a84ef0f44bec",
+        "android_client_info": {
+          "package_name": "com.example.win10.aybu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019396591722-kiu7or8hriergoril30nrahkfrc0o31r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.win10.aybu",
+            "certificate_hash": "175ce4c3f0b4bbca1f5e25241fa5e3757dcc5a32"
+          }
+        },
+        {
+          "client_id": "1019396591722-g6usaga6hr6vepm6400f00k7uuc022a3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHAw-EvrXVImTlZ0D2D8s9ZYfSO_g665s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019396591722-g6usaga6hr6vepm6400f00k7uuc022a3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

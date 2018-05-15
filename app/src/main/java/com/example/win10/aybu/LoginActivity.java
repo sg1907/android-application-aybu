@@ -151,7 +151,12 @@ public class LoginActivity extends AppCompatActivity {
         else if(dep.equalsIgnoreCase("Civil Eng.")){
             control = 5;
         }
-
+        else if(dep.equalsIgnoreCase("Hukuk")){
+            control = 6;
+        }
+        else if(dep.equalsIgnoreCase("Diş Hekimliği")){
+            control = 7;
+        }
         else{
             Toast.makeText(getApplicationContext(),"Wrong Department!",Toast.LENGTH_SHORT).show();
         }
