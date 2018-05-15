@@ -53,6 +53,8 @@ public class Fragment1_FoodList extends Fragment {
         protected void onPreExecute(){
             super.onPreExecute();
 
+            LoginActivity.control = 0;
+
             arraylist.clear();
 
             /*

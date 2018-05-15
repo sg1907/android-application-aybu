@@ -12,15 +12,27 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    final private String TAG = "MAINACTIVITY";
+
+    static String controllerIndex ;
+
+    static int controllerIndexxx;
+
+    private Bundle extras = null;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -41,6 +53,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        extras = getIntent().getExtras();
+
+        /** Verileri alip atamalari yapalim */
+        controllerIndex = extras.getString(LoginActivity.Index);
+
+        controllerIndexxx = Integer.parseInt(controllerIndex);
+
+        Log.d(TAG,"MAINDEKİ CONTROL INDEXI : : : : :"+controllerIndex);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -83,10 +104,10 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new Fragment1_FoodList();
                     break;
                 case 1:
-                    fragment = new Fragment2_Announcement();
+                    fragment = new Fragment2_Announcement(controllerIndexxx);
                     break;
                 case 2:
-                    fragment = new Fragment3_News();
+                    fragment = new Fragment3_News(controllerIndexxx);
                     break;
             }
 

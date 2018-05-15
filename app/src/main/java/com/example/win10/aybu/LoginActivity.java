@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,11 +27,18 @@ import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private final String TAG = "LOGINACTIVITY";
+
     FirebaseDatabase database;
     DatabaseReference users;
 
     private EditText username, password;
     private Button btnSignIn, btnSignUp;
+
+    static int control = 0;
+
+    static String Index;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void UserControl(final String username, final String password) {
 
+
         final Intent i=  new Intent(getApplicationContext(),MainActivity.class);
 
         users.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -79,8 +88,27 @@ public class LoginActivity extends AppCompatActivity {
 
                         if(login.getPassword().equals(password)){
                             Toast.makeText(getApplicationContext(),"Success Login!",Toast.LENGTH_SHORT).show();
+
+                            //String dep = login.getDepartment().toString();
+                            //control = muh_url_control(login.getDepartment().toString());
+
+                            muh_url_control(login.getDepartment().toString());
+
+                            //Log.d(TAG,"control :  : : :: : " + control);
+
+                            //Log.d(TAG,"control :  : : :: : " + control);
+
+                            //Toast.makeText(getApplicationContext(),login.getDepartment().toString(),Toast.LENGTH_SHORT).show();
+
+
+                            Bundle extras = new Bundle();
+                            extras.putString(Index, ""+control);
+                            i.putExtras(extras);
+                            i.setClass(getApplicationContext(), MainActivity.class);
                             startActivity(i);
+
                         }
+
                         else{
                             Toast.makeText(getApplicationContext(),"Password is Wrong!",Toast.LENGTH_SHORT).show();
                         }
@@ -97,6 +125,36 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void muh_url_control(String dep){
+
+        if(dep.equalsIgnoreCase("Computer Eng.")) {
+            control = 0;
+        }
+        else if(dep.equalsIgnoreCase("Electrical Electronics Eng.")){
+            control = 1;
+        }
+
+        else if(dep.equalsIgnoreCase("Machine Eng.")){
+            control = 2;
+        }
+
+        else if(dep.equalsIgnoreCase("Industry Eng.")){
+            control = 3;
+        }
+
+        else if(dep.equalsIgnoreCase("Material Eng.")){
+            control = 4;
+        }
+
+        else if(dep.equalsIgnoreCase("Civil Eng.")){
+            control = 5;
+        }
+
+        else{
+            Toast.makeText(getApplicationContext(),"Wrong Department!",Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
